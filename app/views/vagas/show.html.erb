@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Empresa:</strong>
+  <%= @vaga.empresa %>
+</p>
+
+<p>
+  <strong>Titulo:</strong>
+  <%= @vaga.titulo %>
+</p>
+
+<p>
+  <strong>Localizacao:</strong>
+  <%= @vaga.localizacao %>
+</p>
+
+<p>
+  <strong>Contrato:</strong>
+  <%= @vaga.contrato %>
+</p>
+
+<p>
+  <strong>Jornada:</strong>
+  <%= @vaga.jornada %>
+</p>
+
+<p>
+  <strong>Local:</strong>
+  <%= @vaga.local %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @vaga.link %>
+</p>
+
+<p>
+  <strong>Descricao:</strong>
+  <%= @vaga.descricao %>
+</p>
+
+<%= link_to 'Edit', edit_vaga_path(@vaga) %> |
+<%= link_to 'Back', vagas_path %>
