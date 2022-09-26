@@ -17,7 +17,10 @@
  <article class="blog-post">
  <% @vagas.each do |vaga| %>
         <h2 class="blog-post-title mb-1"><%= vaga.titulo %></h2>
+        <br>
         <p>Empresa: <%= vaga.empresa %></p>
+        <p>Tipo de Contratação: <%= vaga.contrato %></p>
+
         <p>Jornada: <%= vaga.jornada %></p>
         <p>Localização: <%= vaga.localizacao %></p>
 
