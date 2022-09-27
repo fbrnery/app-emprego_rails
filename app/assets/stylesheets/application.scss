@@ -1,1 +1,9 @@
 @import 'bootstrap/scss/bootstrap';
+
+.alert-primary {
+    --bs-alert-color: #055160;
+    --bs-alert-bg: #cff4fc;
+    --bs-alert-border-color: #b6effb;
+    margin-left: 10rem;
+    margin-right: 10rem;
+}

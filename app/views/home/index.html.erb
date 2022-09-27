@@ -1,30 +1,35 @@
 <% if notice %>
-  <aside id="notice"><%= notice %></aside>
+<aside id="notice"><%= notice %></aside>
 <% end %>
 
 <div class="container-fluid">
- <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
-      <h1 class="display-4 fw-normal">Jobs em Ruby on Rails e Reactjs:</h1>
-      <p class="fs-5 text-muted">
-      Quickly build an effective pricing 
-      table for your potential customers with this Bootstrap example. 
-      It’s built with default Bootstrap components and utilities 
-      with little customization.
-      </p>
+    <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+        <h1 class="display-4 fw-normal">Jobs em Ruby on Rails e Reactjs:</h1>
+        <p class="fs-5 text-muted">
+            Quickly build an effective pricing
+            table for your potential customers with this Bootstrap example.
+            It’s built with default Bootstrap components and utilities
+            with little customization.
+        </p>
     </div>
     <br>
 
- <article class="blog-post">
- <% @vagas.each do |vaga| %>
-        <h2 class="blog-post-title mb-1"><%= vaga.titulo %></h2>
-        <br>
-        <p>Empresa: <%= vaga.empresa %></p>
-        <p>Tipo de Contratação: <%= vaga.contrato %></p>
+    <article class="blog-post">
+        <% @vagas.each do |vaga| %>
+        <div class="media-content">
+            <div class="alert alert-primary" role="alert">
+                <a href="<%= vaga_path(id: vaga.id) %>">
+                    <h4><%= vaga.titulo %></h4>
+                </a>
+                <p class="title is-4"> Tipo de contratação: <%= vaga.contrato %></p></a>
+                <p>Jornada: <%= vaga.jornada %></p>
+                <p>Localização: <%= vaga.localizacao %></p>
+                <h5>Data da publicação: <%= vaga.created_at.strftime("%d/%m/%Y") %></h5>
+                <hr>
+            </div>
+        </div>
+    </article>
+    <% end %>
+</div>
 
-        <p>Jornada: <%= vaga.jornada %></p>
-        <p>Localização: <%= vaga.localizacao %></p>
 
-        <hr>
-        </article>
-  <% end %>
-  </div>
