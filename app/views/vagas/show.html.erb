@@ -1,5 +1,8 @@
 <p id="notice"><%= notice %></p>
-
+<br><br>
+<div class="alert alert-primary" role="alert">
+<h2>Detalhes da Vaga:</h2>
+<hr>
 <p>
   <strong>Empresa:</strong>
   <%= @vaga.empresa %>
@@ -16,7 +19,7 @@
 </p>
 
 <p>
-  <strong>Contrato:</strong>
+  <strong>Tipo de Contratação:</strong>
   <%= @vaga.contrato %>
 </p>
 
@@ -26,12 +29,12 @@
 </p>
 
 <p>
-  <strong>Local:</strong>
+  <strong>Local de Trabalho:</strong>
   <%= @vaga.local %>
 </p>
 
 <p>
-  <strong>Link:</strong>
+  <strong>Para canditatar-se:</strong>
   <%= @vaga.link %>
 </p>
 
@@ -39,6 +42,5 @@
   <strong>Descricao:</strong>
   <%= @vaga.descricao %>
 </p>
-
-<%= link_to 'Edit', edit_vaga_path(@vaga) %> |
-<%= link_to 'Back', vagas_path %>
+<hr>
+</div>
