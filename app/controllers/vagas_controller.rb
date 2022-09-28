@@ -1,4 +1,5 @@
 class VagasController < ApplicationController
+  skip_before_action :authorize, only: [:create, :update, :destroy]
   before_action :set_vaga, only: %i[ show edit update destroy ]
 
   # GET /vagas or /vagas.json

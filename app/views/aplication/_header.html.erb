@@ -5,13 +5,21 @@
             <%= image_tag 'rails.png' =%>
         </a>
 
-        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-            <li><a href="#" class="nav-link px-2 link-secondary"><%= link_to "Home", home_index_path%></a></li>
+        <ul class="nav">
+            <li><a href="#" class="nav-link px-2 link-secondary"><%= link_to "| Home |", home_index_path%></a></li>
         </ul>
 
+        <div class="d-grid gap-2 d-md-block">
+            <% if session[:user_id] %>
+            <button class="btn btn-info" type="button"><%= link_to 'Postar',   vagas_path   %></button>
+            <button class="btn btn-danger"
+                type="button"><%= link_to 'Logout', logout_path, method: :delete   %></button>
+            <% end %>
+        </div>
+
         <div class="col-md-3 text-end">
-            <button type="button" class="btn btn-outline-primary me-2">Login</button>
-            <button type="button" class="btn btn-primary">Sign-up</button>
+            <a class="btn btn-primary" href='/sessions/new'>Login</a>
+            <a class="btn btn-primary" href='/users/new'>Sign-up</a>
         </div>
     </header>
 </div>
