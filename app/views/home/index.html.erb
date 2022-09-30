@@ -14,21 +14,16 @@
     </div>
     <br>
 
-    <article class="blog-post">
-        <% @vagas.each do |vaga| %>
-         <div class="card-body">
-            <div class="alert alert-primary" role="alert">
-                <a href="<%= vaga_path(id: vaga.id) %>">
-                    <h4><%= vaga.titulo %></h4>
-                </a>
-                <p class="title is-4"> Tipo de contratação: <%= vaga.contrato %></p></a>
-                <p>Jornada: <%= vaga.jornada %></p>
-                <p>Localização: <%= vaga.localizacao %></p>
-                <h5>Data da publicação: <%= vaga.created_at.strftime("%d/%m/%Y") %></h5>
-                <hr>
-            </div>
-        </div>
-    </article>
+    <% @vagas.each do |vaga| %>
+    <div class="container-fluid py-5">
+        <a href="<%= vaga_path(id: vaga.id) %>">
+            <h4><%= vaga.titulo %></h4>
+        </a>
+        <p class="title is-4"> Tipo de contratação: <%= vaga.contrato %></p></a>
+        <p>Jornada: <%= vaga.jornada %></p>
+        <p>Localização: <%= vaga.localizacao %></p>
+        <h5>Data da publicação: <%= vaga.created_at.strftime("%d/%m/%Y") %></h5>
+    </div>
     <% end %>
 </div>
 <br>

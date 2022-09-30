@@ -11,7 +11,7 @@
 
         <div class="d-grid gap-2 d-md-block">
             <% if session[:user_id] %>
-            <button class="btn btn-info" type="button"><%= link_to 'Postar',   vagas_path   %></button>
+            <button class="btn btn-info" type="button"><%= link_to 'Postar',   vagas_new_path   %></button>
             <button class="btn btn-danger"
                 type="button"><%= link_to 'Logout', logout_path, method: :delete   %></button>
             <% end %>
