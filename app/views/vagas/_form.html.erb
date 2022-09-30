@@ -1,57 +1,61 @@
 <%= form_with(model: vaga) do |form| %>
-  <% if vaga.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(vaga.errors.count, "error") %> prohibited this vaga from being saved:</h2>
+<% if vaga.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(vaga.errors.count, "error") %> prohibited this vaga from being saved:</h2>
 
-      <ul>
-        <% vaga.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <ul>
+    <% vaga.errors.each do |error| %>
+    <li><%= error.full_message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
 
-  <div class="field">
+<main class="form-signin w-100 m-auto">
+  <div class="col">
     <%= form.label :empresa %>
-    <%= form.text_field :empresa %>
+    <%= form.text_field :empresa, class:"form-control" %>
   </div>
+  <br>
 
-  <div class="field">
+  <div class="col">
     <%= form.label :titulo %>
-    <%= form.text_field :titulo %>
+    <%= form.text_field :titulo, class:"form-control" %>
   </div>
-
-  <div class="field">
+  <br>
+  <div class="col">
     <%= form.label :localizacao %>
-    <%= form.text_field :localizacao %>
+    <%= form.text_field :localizacao, class:"form-control" %>
   </div>
-
-  <div class="field">
+  <br>
+  <div class="col">
     <%= form.label :contrato %>
-    <%= form.text_field :contrato %>
+    <%= form.text_field :contrato, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="col">
     <%= form.label :jornada %>
-    <%= form.text_field :jornada %>
+    <%= form.text_field :jornada, class:"form-control" %>
   </div>
-
-  <div class="field">
+  <br>
+  <div class="col">
     <%= form.label :local %>
-    <%= form.text_field :local %>
+    <%= form.text_field :local, class:"form-control" %>
   </div>
-
-  <div class="field">
+  <br>
+  <div class="col">
     <%= form.label :link %>
-    <%= form.text_field :link %>
+    <%= form.text_field :link, class:"form-control" %>
   </div>
-
-  <div class="field">
-    <%= form.label :descricao %>
-    <%= form.text_area :descricao %>
+  <br>
+  <div class="col">
+    <%= :descricao %>
+    <%= form.text_area :descricao, class: 'form-control', :size =>"25x10" %>
   </div>
-
+  <br>
+  <br>
   <div class="actions">
     <%= form.submit %>
   </div>
-<% end %>
+  <% end %>
+</main>
