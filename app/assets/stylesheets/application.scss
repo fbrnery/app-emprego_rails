@@ -35,13 +35,13 @@
     border-top-right-radius: 0;
 }
 
-.alert-primary  {
+.alert-primary {
     text-align: center;
 }
 
 .form-control {
-  text-align: left;
-  align-items: center;
+    text-align: left;
+    align-items: center;
 }
 
 .actions {
@@ -62,4 +62,14 @@
     margin-right: -3rem;
     margin-top: 2rem;
     margin-bottom: -1rem;
+}
+
+.banner {
+    width: 60%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.header {
+    background-color: #055160;
 }
