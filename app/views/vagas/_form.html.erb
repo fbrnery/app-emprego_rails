@@ -38,8 +38,10 @@
 <br>
 
   <div class="col">
+   <div class="selecao">
    <h5>Jornada de Trabalho:</h5>
-    <%= form.text_field :jornada, class:"form-control" %>
+    <%= form.select :jornada, ['Full-Time', 'Part-Time']  %>
+    </h5>
   </div>
   <br>
   <div class="col">
