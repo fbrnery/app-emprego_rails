@@ -8,11 +8,6 @@
     margin-right: 10rem;
 }
 
-.nav {
-    margin-left: -25rem;
-    padding-left: -5rem;
-    padding-right: 5rem;
-}
 
 .form-signin {
     max-width: 330px;
@@ -72,4 +67,29 @@
 
 .header {
     background-color: #055160;
+}
+
+.form-control-dark {
+    border-color: var(--bs-gray);
+}
+
+.form-control-dark:focus {
+    border-color: #fff;
+    box-shadow: 0 0 0 .25rem rgba(255, 255, 255, .25);
+}
+
+.text-small {
+    font-size: 85%;
+}
+
+.dropdown-toggle {
+    outline: 0;
+}
+a {
+    color:#fff;
+    text-decoration: underline;
+}
+
+.d-grid {
+    text-align: center;
 }

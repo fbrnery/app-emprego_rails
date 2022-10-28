@@ -3,6 +3,14 @@
 <% end %>
 
 <div class="banner">
+<div class="d-grid gap-2 d-md-block">
+       <% if session[:user_id] %>
+       <p>
+        <a><%= button_to 'Postar',  vagas_new_path, method: :get, class: 'btn btn-primary my-2' %></a>
+        <%= button_to 'Logout',  logout_path, method: :delete, class: 'btn btn-danger' %></a>
+        </p>
+       <% end %>
+     </div>
     <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
         <h1 class="display-4 fw-normal">Jobs em Ruby on Rails e Reactjs:</h1>
         <p class="fs-5 text-muted">
