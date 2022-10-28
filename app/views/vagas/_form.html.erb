@@ -25,45 +25,45 @@
   </div>
   <br>
   <div class="col">
-     <h5>Cidade:</h5>
+    <h5>Cidade:</h5>
     <%= form.text_field :localizacao, class:"form-control" %>
   </div>
   <br>
   <div class="col">
     <h5>Tipo de Contrato:</h5>
     <div class="selecao">
-    <h5><%= form.select :contrato, ['CLT', 'PJ', 'CLT ou PJ', 'Estágio'] %></h5>
+      <h5><%= form.select :contrato, ['CLT', 'PJ', 'CLT ou PJ', 'Estágio'] %></h5>
     </div>
   </div>
-<br>
+  <br>
 
   <div class="col">
-   <div class="selecao">
-   <h5>Jornada de Trabalho:</h5>
-    <%= form.select :jornada, ['Full-Time', 'Part-Time']  %>
-    </h5>
-  </div>
-  <br>
-  <div class="col">
-    <h5>Local de Trabalho:</h5>
     <div class="selecao">
-    <h5><%= form.select :local, ['Presencial', '100% Remoto', 'Hibrído'] %></h5>
+      <h5>Jornada de Trabalho:</h5>
+      <h5><%= form.select :jornada, ['Full-Time', 'Part-Time']  %></h5>
+      </h5>
     </div>
-  </div>
-  <br>
-  <div class="col">
-    <h6>Link (ou email) para canditatar-se:</h6>
-    <%= form.text_field :link, class:"form-control" %>
-  </div>
-  <br>
-  <div class="col">
-    <h5>Descrição da Vaga</h5>
-    <%= form.text_area :descricao, class: 'form-control', :size =>"25x10" %>
-  </div>
-  <br>
-  <br>
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-  <% end %>
+    <br>
+    <div class="col">
+      <h5>Local de Trabalho:</h5>
+      <div class="selecao">
+        <h5><%= form.select :local, ['Presencial', '100% Remoto', 'Hibrído'] %></h5>
+      </div>
+    </div>
+    <br>
+    <div class="col">
+      <h6>Link (ou email) para canditatar-se:</h6>
+      <%= form.text_field :link, class:"form-control" %>
+    </div>
+    <br>
+    <div class="col">
+      <h5>Descrição da Vaga</h5>
+      <%= form.text_area :descricao, class: 'form-control', :size =>"25x10" %>
+    </div>
+    <br>
+    <br>
+    <div class="actions">
+      <%= form.submit %>
+    </div>
+    <% end %>
 </main>
