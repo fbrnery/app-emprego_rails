@@ -13,43 +13,49 @@
 
 <main class="form-signin w-100 m-auto">
   <div class="col">
-    <%= form.label :empresa %>
+
+    <h5>Nome da empresa:</h5>
     <%= form.text_field :empresa, class:"form-control" %>
   </div>
   <br>
 
   <div class="col">
-    <%= form.label :titulo %>
+    <h5>Titulo da Vaga:</h5>
     <%= form.text_field :titulo, class:"form-control" %>
   </div>
   <br>
   <div class="col">
-    <%= form.label :localizacao %>
+     <h5>Cidade:</h5>
     <%= form.text_field :localizacao, class:"form-control" %>
   </div>
   <br>
   <div class="col">
-    <%= form.label :contrato %>
-    <%= form.text_field :contrato, class:"form-control" %>
+    <h5>Tipo de Contrato:</h5>
+    <div class="selecao">
+    <h5><%= form.select :contrato, ['CLT', 'PJ', 'CLT ou PJ', 'Estágio'] %></h5>
+    </div>
   </div>
+<br>
 
   <div class="col">
-    <%= form.label :jornada %>
+   <h5>Jornada de Trabalho:</h5>
     <%= form.text_field :jornada, class:"form-control" %>
   </div>
   <br>
   <div class="col">
-    <%= form.label :local %>
-    <%= form.text_field :local, class:"form-control" %>
+    <h5>Local de Trabalho:</h5>
+    <div class="selecao">
+    <h5><%= form.select :local, ['Presencial', '100% Remoto', 'Hibrído'] %></h5>
+    </div>
   </div>
   <br>
   <div class="col">
-    <%= form.label :link %>
+    <h6>Link (ou email) para canditatar-se:</h6>
     <%= form.text_field :link, class:"form-control" %>
   </div>
   <br>
   <div class="col">
-    <%= :descricao %>
+    <h5>Descrição da Vaga</h5>
     <%= form.text_area :descricao, class: 'form-control', :size =>"25x10" %>
   </div>
   <br>
